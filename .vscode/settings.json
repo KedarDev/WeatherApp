@@ -1,0 +1,6 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "marquee.widgets.npm-stats.packageNames": [
+        "weather-app-frontend"
+    ]
+}
