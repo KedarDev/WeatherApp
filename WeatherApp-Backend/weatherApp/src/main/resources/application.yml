@@ -73,9 +73,9 @@ spring:
         
 # Database Settings
   datasource:
-    url: jdbc:postgresql://c2-s2-t5-do-user-12484302-0.b.db.ondigitalocean.com:25060/weatherDB
-    username: doadmin
-    password: AVNS_O2ptsJf8JTrE0gtyncP
+    url: jdbc:postgresql://localhost:5432/WeatherDB
+    username:  postgres
+    password: pg123
     hikari:
       maximum-pool-size: 2
   jpa:
@@ -95,9 +95,9 @@ spring:
   
 # Database Settings
   datasource:
-    url: jdbc:postgresql://c2-s2-t5-do-user-12484302-0.b.db.ondigitalocean.com:25060/weatherDB
-    username: doadmin
-    password: AVNS_O2ptsJf8JTrE0gtyncP
+    url: jdbc:postgresql:localhost:5432/WeatherDB
+    username:  postgres
+    password: pg123
     hikari:
       maximum-pool-size: 2  
   jpa:
