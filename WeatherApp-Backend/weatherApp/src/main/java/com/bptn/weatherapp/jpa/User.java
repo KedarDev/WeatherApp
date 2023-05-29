@@ -17,13 +17,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name="\"User\"")
-public class User implements Serializable { 
+@Entity // @Entity tells us this class will be our User table in our DB
+@Table(name="\"User\"") // Tells us the name of the DB table
+public class User implements Serializable { // Serializable is an interface that tells the compiler this class is serializable & can save,store,or send files 
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;  // Unique identifier used in the serialization & deserialization processes
 	
-	@Column(name="\"firstName\"")
+	@Column(name="\"firstName\"") // @Column maps the annotated field to a column in the DB
 	private String firstName;
 		
 	@Column(name="\"lastName\"")
@@ -45,21 +45,21 @@ public class User implements Serializable {
 	@Column(name="\"createdOn\"")
 	private Timestamp createdOn;
 
-	@JsonIgnore
-	@OneToMany(mappedBy="user", fetch=FetchType.EAGER)
+	@JsonIgnore // This annotation ignores the property during the serialization/deserialization
+	@OneToMany(mappedBy="user", fetch=FetchType.EAGER) // Mapped by user loaded with urgency 
 	private List<Weather> weathers;
 	
-	@Id
+	@Id // tells us that this is a PK
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="\"userId\"")
 	@JsonProperty(access = Access.WRITE_ONLY)
 	private Integer userId;
 	
+	// constructor 
 	public User() {
-		
-	    
 	}
 
+	// GETTERS & SETTERS
 	public String getFirstName() {
 		return firstName;
 	}
@@ -124,28 +124,28 @@ public class User implements Serializable {
 		this.createdOn = createdOn;
 	}
 
+	public void setWeathers(List<Weather> weathers) {
+		this.weathers = weathers;
+	}
+	
+	public Integer getUserId() {
+		return userId;
+	}
+	
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+	
+	public List<Weather> getWeathers() {
+		return weathers;
+	}
+
+	// toString()
 	@Override
 	public String toString() {
 		return "User [firstName=" + firstName + ", lastName=" + lastName + ", username=" + username + ", password="
 				+ password + ", phone=" + phone + ", emailId=" + emailId + ", emailVerified=" + emailVerified
 				+ ", createdOn=" + createdOn + ", weathers=" + weathers + ", userId=" + userId + "]";
 	}
-
-	public List<Weather> getWeathers() {
-		return weathers;
-	}
-
-	public void setWeathers(List<Weather> weathers) {
-		this.weathers = weathers;
-	}
-
-	public Integer getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
-	
 	
 }

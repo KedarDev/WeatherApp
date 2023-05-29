@@ -16,7 +16,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 
-@Entity
+@Entity 
 @Table(name="\"Weather\"")
 public class Weather implements Serializable { 
 
@@ -78,10 +78,12 @@ public class Weather implements Serializable {
 	@JoinColumn(name="\"userId\"")
 	private User user;
 	
+	// constructor
 	public Weather() {
 		
 	}
 
+	// Getter & Setters
 	public Integer getWeatherId() {
 		return weatherId;
 	}
@@ -234,6 +236,7 @@ public class Weather implements Serializable {
 		this.user = user;
 	}
 
+	// toString()
 	@Override
 	public String toString() {
 		return "Weather [weatherId=" + weatherId + ", cloudsAll=" + cloudsAll + ", description=" + description
