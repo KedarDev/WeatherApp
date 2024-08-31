@@ -17,7 +17,7 @@ const VerifyEmail = () => {
         //call the verifyEMail API and pass the field value which has verificationCode
         const apiResponse = await verifyEmailApi(values.verificationCode);
 
-        if (apiResponse.status == 1) {
+        if (apiResponse.status === 1) {
             navigate("/login");
             toast("Congratulations your email has been successfully verified");
         } else {

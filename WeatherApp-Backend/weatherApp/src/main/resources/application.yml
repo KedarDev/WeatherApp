@@ -32,8 +32,8 @@ spring:
       
 # Email Settings
   mail:
-    username: obsiditeam5@gmail.com
-    password: vgrguwhjyxawqndr
+    username: kedar.h.dev@gmail.com
+    password: snxe vbtc wpsm gobk
     host: smtp.gmail.com
     port: 587
     protocol: smtp
@@ -73,9 +73,9 @@ spring:
         
 # Database Settings
   datasource:
-    url: jdbc:postgresql://localhost:5432/WeatherDB
-    username:  postgres
-    password: pg123
+    url: jdbc:postgresql://localhost:5432/WeatherApp
+    username: postgres
+    password: postgres
     hikari:
       maximum-pool-size: 2
   jpa:
@@ -86,7 +86,7 @@ spring:
 
 # Prod Profile
 server:
-  port: 8080
+  port: 8083
   
 spring:
   config:
@@ -95,9 +95,9 @@ spring:
   
 # Database Settings
   datasource:
-    url: jdbc:postgresql://localhost:5432/WeatherDB
-    username:  postgres
-    password: pg123
+    url: jdbc:postgresql://localhost:5432/WeatherApp
+    username: postgres
+    password: postgres
     hikari:
       maximum-pool-size: 2  
   jpa:

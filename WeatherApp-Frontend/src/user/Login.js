@@ -29,7 +29,7 @@ const Login = () => {
     //useContext hook which helps to make use of AppContext
     const appContext = useContext(AppContext);
 
-    //create a state variable, ope to toggle the visibility of the password and initialize it to false
+    //create a state variable, open to toggle the visibility of the password and initialize it to false
     const [open, setOpen] = useState(false);
 
     const onFormSubmit = async (values, actions) => {

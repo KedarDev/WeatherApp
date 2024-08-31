@@ -16,7 +16,7 @@ jwt:
     
 # Open Weather API Configuration  
 api:
-  key: fe395eff8d088b843051a8a0fb786ea9
+  key: 13bdbfcff23e01835eb9c3ac32aab23a
   base:
     url: https://api.openweathermap.org/data/2.5/weather
 
